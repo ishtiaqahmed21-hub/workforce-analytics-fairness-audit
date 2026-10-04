@@ -1,0 +1,14 @@
+# Study protocol
+
+This is an educational study, never an employee decision system. The fictional HR sample answers workforce questions; Adult independently audits historical income classification. No row joins or category equivalences connect these populations. BLS is contextual only.
+
+1. Validate raw hashes, schemas, labels, missingness, uniqueness and ranges. Retain exact original files locally, excluded from Git. Impute within fitted pipelines. Drop HR identifiers/constants and Gender; keep Gender alongside outcomes for subgroup reporting. Exclude Adult sex/race and sampling weight from predictors. Proxies remain, so omission does not guarantee fairness.
+2. HR uses seeded stratified 60/20/20 train/validation/test. Compare logistic regression and random forest on validation average precision; optimize selected model threshold on validation F1. No refitting after threshold selection. Adult keeps official test file untouched; split training file 80/20 and apply same selection protocol. Report test metrics only after choices are frozen. This evaluates cross-sectional classification, not future exits or causal effects.
+3. Report precision, recall, F1, ROC AUC and average precision (AP, not trapezoidal PR AUC), confusion counts, Brier scores and calibration bins. No accuracy-only selection. Missing subgroup denominators yield undefined metrics. Wilson intervals quantify binomial uncertainty; subgroup sample sizes and actual/predicted positives are explicit.
+4. Fairness compares Female minus Male within each dataset and Female/Male predicted-positive ratios. Adult positive means income above $50K, not a hiring decision. Attrition positive means flagged attrition, which is not a favorable employment outcome. These distinct meanings forbid treating their selection rates as equivalent.
+5. Compensation uses unspecified source units. Welch and Mann-Whitney tests are exploratory; role-adjusted log-income regression assesses conditional association. Report effect sizes, uncertainty and confounding limitations. Synthetic patterns cannot establish real wage inequality or discrimination.
+6. BLS January 2026 medians use a different, contemporary survey population; show separately without performance traffic lights or claimed matched comparisons. Recommendations concern data collection, workload investigation and controlled pilots, not punitive employee ranking.
+
+SIMULATED = fictional IBM source records. OBSERVED = Adult records or BLS published estimates. DERIVED = calculations, always retaining source status. ASSUMPTION = thresholds, split seed and any business scenario. No real savings are claimed.
+
+Adult official test overlap audit found 23 exact full-record matches and 26 predictor-only matches with the original training file. The official split is preserved; unknown identity and repeated records can make evaluation optimistic. Leakage control describes fitting/selection discipline, not a guarantee of distinct people.

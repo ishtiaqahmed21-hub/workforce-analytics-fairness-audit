@@ -1,0 +1,715 @@
+{
+  "data_status": {
+    "hr": "SIMULATED fictional IBM records",
+    "adult": "OBSERVED historical Census-derived records",
+    "bls": "OBSERVED published survey estimates; contextual only"
+  },
+  "source_hashes": {
+    "emp_attrition.csv": "a5c31e38bd7fafc9bc333884eb181b06b41b8e5e488e8f7ccb27199fb3be7659",
+    "adult.zip": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb"
+  },
+  "hr_kpis": {
+    "sample_records": 1470,
+    "attrition_yes": 237,
+    "attrition_share": 0.16122448979591836,
+    "retained_records": 1233,
+    "median_tenure_years": 5.0,
+    "median_monthly_income_units": 4919.0
+  },
+  "quality": {
+    "adult_official_test_rows_matching_train_full": 23,
+    "adult_official_test_rows_matching_train_predictors": 26,
+    "hr": {
+      "rows": 1470,
+      "columns": 35,
+      "missing": {
+        "Age": 0,
+        "Attrition": 0,
+        "BusinessTravel": 0,
+        "DailyRate": 0,
+        "Department": 0,
+        "DistanceFromHome": 0,
+        "Education": 0,
+        "EducationField": 0,
+        "EmployeeCount": 0,
+        "EmployeeNumber": 0,
+        "EnvironmentSatisfaction": 0,
+        "Gender": 0,
+        "HourlyRate": 0,
+        "JobInvolvement": 0,
+        "JobLevel": 0,
+        "JobRole": 0,
+        "JobSatisfaction": 0,
+        "MaritalStatus": 0,
+        "MonthlyIncome": 0,
+        "MonthlyRate": 0,
+        "NumCompaniesWorked": 0,
+        "Over18": 0,
+        "OverTime": 0,
+        "PercentSalaryHike": 0,
+        "PerformanceRating": 0,
+        "RelationshipSatisfaction": 0,
+        "StandardHours": 0,
+        "StockOptionLevel": 0,
+        "TotalWorkingYears": 0,
+        "TrainingTimesLastYear": 0,
+        "WorkLifeBalance": 0,
+        "YearsAtCompany": 0,
+        "YearsInCurrentRole": 0,
+        "YearsSinceLastPromotion": 0,
+        "YearsWithCurrManager": 0
+      },
+      "duplicate_rows": 0,
+      "dtypes": {
+        "Age": "int64",
+        "Attrition": "str",
+        "BusinessTravel": "str",
+        "DailyRate": "int64",
+        "Department": "str",
+        "DistanceFromHome": "int64",
+        "Education": "int64",
+        "EducationField": "str",
+        "EmployeeCount": "int64",
+        "EmployeeNumber": "int64",
+        "EnvironmentSatisfaction": "int64",
+        "Gender": "str",
+        "HourlyRate": "int64",
+        "JobInvolvement": "int64",
+        "JobLevel": "int64",
+        "JobRole": "str",
+        "JobSatisfaction": "int64",
+        "MaritalStatus": "str",
+        "MonthlyIncome": "int64",
+        "MonthlyRate": "int64",
+        "NumCompaniesWorked": "int64",
+        "Over18": "str",
+        "OverTime": "str",
+        "PercentSalaryHike": "int64",
+        "PerformanceRating": "int64",
+        "RelationshipSatisfaction": "int64",
+        "StandardHours": "int64",
+        "StockOptionLevel": "int64",
+        "TotalWorkingYears": "int64",
+        "TrainingTimesLastYear": "int64",
+        "WorkLifeBalance": "int64",
+        "YearsAtCompany": "int64",
+        "YearsInCurrentRole": "int64",
+        "YearsSinceLastPromotion": "int64",
+        "YearsWithCurrManager": "int64"
+      },
+      "iqr_flags": {
+        "Age": 0,
+        "DailyRate": 0,
+        "DistanceFromHome": 0,
+        "Education": 0,
+        "EmployeeCount": 0,
+        "EmployeeNumber": 0,
+        "EnvironmentSatisfaction": 0,
+        "HourlyRate": 0,
+        "JobInvolvement": 0,
+        "JobLevel": 0,
+        "JobSatisfaction": 0,
+        "MonthlyIncome": 114,
+        "MonthlyRate": 0,
+        "NumCompaniesWorked": 52,
+        "PercentSalaryHike": 0,
+        "PerformanceRating": 226,
+        "RelationshipSatisfaction": 0,
+        "StandardHours": 0,
+        "StockOptionLevel": 85,
+        "TotalWorkingYears": 63,
+        "TrainingTimesLastYear": 238,
+        "WorkLifeBalance": 0,
+        "YearsAtCompany": 104,
+        "YearsInCurrentRole": 21,
+        "YearsSinceLastPromotion": 107,
+        "YearsWithCurrManager": 14
+      }
+    },
+    "adult_train": {
+      "rows": 32561,
+      "columns": 15,
+      "missing": {
+        "age": 0,
+        "workclass": 1836,
+        "fnlwgt": 0,
+        "education": 0,
+        "education_num": 0,
+        "marital_status": 0,
+        "occupation": 1843,
+        "relationship": 0,
+        "race": 0,
+        "sex": 0,
+        "capital_gain": 0,
+        "capital_loss": 0,
+        "hours_per_week": 0,
+        "native_country": 583,
+        "income": 0
+      },
+      "duplicate_rows": 24,
+      "dtypes": {
+        "age": "int64",
+        "workclass": "str",
+        "fnlwgt": "int64",
+        "education": "str",
+        "education_num": "int64",
+        "marital_status": "str",
+        "occupation": "str",
+        "relationship": "str",
+        "race": "str",
+        "sex": "str",
+        "capital_gain": "int64",
+        "capital_loss": "int64",
+        "hours_per_week": "int64",
+        "native_country": "str",
+        "income": "str"
+      },
+      "iqr_flags": {
+        "age": 143,
+        "fnlwgt": 992,
+        "education_num": 1198,
+        "capital_gain": 2712,
+        "capital_loss": 1519,
+        "hours_per_week": 9008
+      }
+    },
+    "adult_test": {
+      "rows": 16281,
+      "columns": 15,
+      "missing": {
+        "age": 0,
+        "workclass": 963,
+        "fnlwgt": 0,
+        "education": 0,
+        "education_num": 0,
+        "marital_status": 0,
+        "occupation": 966,
+        "relationship": 0,
+        "race": 0,
+        "sex": 0,
+        "capital_gain": 0,
+        "capital_loss": 0,
+        "hours_per_week": 0,
+        "native_country": 274,
+        "income": 0
+      },
+      "duplicate_rows": 5,
+      "dtypes": {
+        "age": "int64",
+        "workclass": "str",
+        "fnlwgt": "int64",
+        "education": "str",
+        "education_num": "int64",
+        "marital_status": "str",
+        "occupation": "str",
+        "relationship": "str",
+        "race": "str",
+        "sex": "str",
+        "capital_gain": "int64",
+        "capital_loss": "int64",
+        "hours_per_week": "int64",
+        "native_country": "str",
+        "income": "str"
+      },
+      "iqr_flags": {
+        "age": 73,
+        "fnlwgt": 471,
+        "education_num": 596,
+        "capital_gain": 1323,
+        "capital_loss": 763,
+        "hours_per_week": 4488
+      }
+    },
+    "policy": "Duplicates flagged but retained: Adult lacks unique person IDs. IQR flags are diagnostic, never automatic deletions."
+  },
+  "compensation": {
+    "female_n": 588,
+    "male_n": 882,
+    "female_mean": 6686.566326530612,
+    "male_mean": 6380.507936507936,
+    "mean_difference_female_minus_male": 306.05839002267567,
+    "cohens_d": 0.06501962496625079,
+    "welch_p": 0.22183687764870916,
+    "mann_whitney_p": 0.08841668326602112,
+    "rank_biserial_female_minus_male": 0.05239136470914896,
+    "adjusted_log_income_male_vs_female_coefficient": 0.009563588337173946,
+    "adjusted_ci95": [
+      -0.01994808203126492,
+      0.03907525870561281
+    ],
+    "adjusted_p": 0.52533166647487,
+    "adjustment": "JobRole + Age + TotalWorkingYears; HC3 robust covariance; exploratory association, not causal"
+  },
+  "hr": {
+    "split_sizes": {
+      "train": 882,
+      "validation": 294,
+      "test": 294
+    },
+    "selection": {
+      "selected_model": "logistic",
+      "validation_average_precision": {
+        "logistic": 0.6389160556811722,
+        "random_forest": 0.6204404062186477
+      },
+      "threshold": 0.32,
+      "validation_f1": 0.631578947368421
+    },
+    "test": {
+      "n": 294,
+      "threshold": 0.32,
+      "precision": 0.5,
+      "recall": 0.5106382978723404,
+      "f1": 0.5052631578947369,
+      "roc_auc": 0.785425101214575,
+      "average_precision": 0.5718280175265456,
+      "brier": 0.10241946147393916,
+      "confusion_matrix": [
+        [
+          223,
+          24
+        ],
+        [
+          23,
+          24
+        ]
+      ]
+    },
+    "gender_audit": [
+      {
+        "group": "Female",
+        "n": 116,
+        "actual_positive_n": 16,
+        "predicted_positive_n": 21,
+        "tn": 89,
+        "fp": 11,
+        "fn": 6,
+        "tp": 10,
+        "selection_rate": 0.1810344827586207,
+        "selection_rate_ci95": [
+          0.12156680637577684,
+          0.2609507236326123
+        ],
+        "tpr": 0.625,
+        "tpr_ci95": [
+          0.386410405455033,
+          0.81518767441136
+        ],
+        "fpr": 0.11,
+        "fpr_ci95": [
+          0.06254196357064666,
+          0.18631296503080064
+        ],
+        "fnr": 0.375,
+        "fnr_ci95": [
+          0.18481232558864005,
+          0.613589594544967
+        ],
+        "brier": 0.09122603875464125,
+        "small_group": false
+      },
+      {
+        "group": "Male",
+        "n": 178,
+        "actual_positive_n": 31,
+        "predicted_positive_n": 27,
+        "tn": 134,
+        "fp": 13,
+        "fn": 17,
+        "tp": 14,
+        "selection_rate": 0.15168539325842698,
+        "selection_rate_ci95": [
+          0.10638925612452374,
+          0.21169804473533635
+        ],
+        "tpr": 0.45161290322580644,
+        "tpr_ci95": [
+          0.291617359805204,
+          0.6222783236264506
+        ],
+        "fpr": 0.08843537414965986,
+        "fpr_ci95": [
+          0.05241011033720432,
+          0.14542315814216394
+        ],
+        "fnr": 0.5483870967741935,
+        "fnr_ci95": [
+          0.37772167637354936,
+          0.7083826401947959
+        ],
+        "brier": 0.10971405156067263,
+        "small_group": false
+      }
+    ],
+    "disparities_female_minus_male": {
+      "selection_rate_difference": 0.029349089500193715,
+      "tpr_difference": 0.17338709677419356,
+      "fpr_difference": 0.021564625850340136,
+      "fnr_difference": -0.1733870967741935,
+      "selection_rate_ratio": 1.193486590038314
+    },
+    "top_permutation_features": [
+      {
+        "feature": "OverTime",
+        "mean_ap_decrease": 0.20686362254461438,
+        "std_ap_decrease": 0.012969670676091252
+      },
+      {
+        "feature": "JobSatisfaction",
+        "mean_ap_decrease": 0.08450821076527695,
+        "std_ap_decrease": 0.013843190960812131
+      },
+      {
+        "feature": "NumCompaniesWorked",
+        "mean_ap_decrease": 0.06295349021387034,
+        "std_ap_decrease": 0.017107996683440877
+      },
+      {
+        "feature": "YearsSinceLastPromotion",
+        "mean_ap_decrease": 0.05206586781599504,
+        "std_ap_decrease": 0.024070871112736644
+      },
+      {
+        "feature": "TotalWorkingYears",
+        "mean_ap_decrease": 0.04979144778875921,
+        "std_ap_decrease": 0.02564758730457493
+      },
+      {
+        "feature": "EnvironmentSatisfaction",
+        "mean_ap_decrease": 0.039653120354409224,
+        "std_ap_decrease": 0.01774442375110553
+      },
+      {
+        "feature": "DistanceFromHome",
+        "mean_ap_decrease": 0.03857083856673427,
+        "std_ap_decrease": 0.008132939853898437
+      },
+      {
+        "feature": "JobInvolvement",
+        "mean_ap_decrease": 0.03397684862346504,
+        "std_ap_decrease": 0.011713942322187443
+      }
+    ]
+  },
+  "adult": {
+    "split_sizes": {
+      "train": 26048,
+      "validation": 6513,
+      "official_test": 16281
+    },
+    "selection": {
+      "selected_model": "random_forest",
+      "validation_average_precision": {
+        "logistic": 0.7717099878533954,
+        "random_forest": 0.8059176805701442
+      },
+      "threshold": 0.33999999999999997,
+      "validation_f1": 0.7123287671232876
+    },
+    "test": {
+      "n": 16281,
+      "threshold": 0.33999999999999997,
+      "precision": 0.6326968461703497,
+      "recall": 0.766770670826833,
+      "f1": 0.6933113906194899,
+      "roc_auc": 0.9129072633753762,
+      "average_precision": 0.7896564585224206,
+      "brier": 0.09864834527433254,
+      "confusion_matrix": [
+        [
+          10723,
+          1712
+        ],
+        [
+          897,
+          2949
+        ]
+      ]
+    },
+    "gender_audit": [
+      {
+        "group": "Female",
+        "n": 5421,
+        "actual_positive_n": 590,
+        "predicted_positive_n": 627,
+        "tn": 4604,
+        "fp": 227,
+        "fn": 190,
+        "tp": 400,
+        "selection_rate": 0.11566131710016603,
+        "selection_rate_ci95": [
+          0.1074185696509354,
+          0.12444838321189279
+        ],
+        "tpr": 0.6779661016949152,
+        "tpr_ci95": [
+          0.6392163022449038,
+          0.7144134366033026
+        ],
+        "fpr": 0.04698820120057959,
+        "fpr_ci95": [
+          0.041372422236131356,
+          0.0533238491349613
+        ],
+        "fnr": 0.3220338983050847,
+        "fnr_ci95": [
+          0.2855865633966973,
+          0.360783697755096
+        ],
+        "brier": 0.05382728153912768,
+        "small_group": false
+      },
+      {
+        "group": "Male",
+        "n": 10860,
+        "actual_positive_n": 3256,
+        "predicted_positive_n": 4034,
+        "tn": 6119,
+        "fp": 1485,
+        "fn": 707,
+        "tp": 2549,
+        "selection_rate": 0.3714548802946593,
+        "selection_rate_ci95": [
+          0.3624141174316087,
+          0.38058655037240374
+        ],
+        "tpr": 0.7828624078624079,
+        "tpr_ci95": [
+          0.7683717756509882,
+          0.7966863792527712
+        ],
+        "fpr": 0.19529195160441873,
+        "fpr_ci95": [
+          0.18653651123780354,
+          0.204355106958677
+        ],
+        "fnr": 0.21713759213759215,
+        "fnr_ci95": [
+          0.20331362074722895,
+          0.23162822434901195
+        ],
+        "brier": 0.12102173261397761,
+        "small_group": false
+      }
+    ],
+    "race_audit": [
+      {
+        "group": "Amer-Indian-Eskimo",
+        "n": 159,
+        "actual_positive_n": 19,
+        "predicted_positive_n": 28,
+        "tn": 129,
+        "fp": 11,
+        "fn": 2,
+        "tp": 17,
+        "selection_rate": 0.1761006289308176,
+        "selection_rate_ci95": [
+          0.12474094423724649,
+          0.2427420005488589
+        ],
+        "tpr": 0.8947368421052632,
+        "tpr_ci95": [
+          0.6860591728889169,
+          0.9706414397011289
+        ],
+        "fpr": 0.07857142857142857,
+        "fpr_ci95": [
+          0.04443737597511979,
+          0.13521499290766995
+        ],
+        "fnr": 0.10526315789473684,
+        "fnr_ci95": [
+          0.029358560298871045,
+          0.31394082711108295
+        ],
+        "brier": 0.05851036348705134,
+        "small_group": false
+      },
+      {
+        "group": "Asian-Pac-Islander",
+        "n": 480,
+        "actual_positive_n": 133,
+        "predicted_positive_n": 169,
+        "tn": 282,
+        "fp": 65,
+        "fn": 29,
+        "tp": 104,
+        "selection_rate": 0.35208333333333336,
+        "selection_rate_ci95": [
+          0.3106837472628554,
+          0.3958316878837975
+        ],
+        "tpr": 0.7819548872180451,
+        "tpr_ci95": [
+          0.7044048343917942,
+          0.8436746778141812
+        ],
+        "fpr": 0.1873198847262248,
+        "fpr_ci95": [
+          0.14977349721087585,
+          0.23171351196581574
+        ],
+        "fnr": 0.21804511278195488,
+        "fnr_ci95": [
+          0.15632532218581874,
+          0.2955951656082057
+        ],
+        "brier": 0.11719926851868427,
+        "small_group": false
+      },
+      {
+        "group": "Black",
+        "n": 1561,
+        "actual_positive_n": 179,
+        "predicted_positive_n": 222,
+        "tn": 1290,
+        "fp": 92,
+        "fn": 49,
+        "tp": 130,
+        "selection_rate": 0.14221652786675207,
+        "selection_rate_ci95": [
+          0.12576735326774122,
+          0.1604223155298883
+        ],
+        "tpr": 0.7262569832402235,
+        "tpr_ci95": [
+          0.6566997900555979,
+          0.7863069575520868
+        ],
+        "fpr": 0.06657018813314038,
+        "fpr_ci95": [
+          0.05459257295056026,
+          0.08095067958031789
+        ],
+        "fnr": 0.2737430167597765,
+        "fnr_ci95": [
+          0.2136930424479132,
+          0.34330020994440213
+        ],
+        "brier": 0.05618304733732669,
+        "small_group": false
+      },
+      {
+        "group": "Other",
+        "n": 135,
+        "actual_positive_n": 25,
+        "predicted_positive_n": 25,
+        "tn": 105,
+        "fp": 5,
+        "fn": 5,
+        "tp": 20,
+        "selection_rate": 0.18518518518518517,
+        "selection_rate_ci95": [
+          0.12869783265528179,
+          0.25909310009649217
+        ],
+        "tpr": 0.8,
+        "tpr_ci95": [
+          0.6086904963046025,
+          0.9113941531319725
+        ],
+        "fpr": 0.045454545454545456,
+        "fpr_ci95": [
+          0.01956946065923517,
+          0.102015935066367
+        ],
+        "fnr": 0.2,
+        "fnr_ci95": [
+          0.0886058468680277,
+          0.39130950369539763
+        ],
+        "brier": 0.07242575699009672,
+        "small_group": false
+      },
+      {
+        "group": "White",
+        "n": 13946,
+        "actual_positive_n": 3490,
+        "predicted_positive_n": 4217,
+        "tn": 8917,
+        "fp": 1539,
+        "fn": 812,
+        "tp": 2678,
+        "selection_rate": 0.3023806109278646,
+        "selection_rate_ci95": [
+          0.2948131741888471,
+          0.31005688714689095
+        ],
+        "tpr": 0.7673352435530086,
+        "tpr_ci95": [
+          0.7530277033585904,
+          0.7810549165865766
+        ],
+        "fpr": 0.14718821729150727,
+        "fpr_ci95": [
+          0.14052688404947827,
+          0.1541086963227083
+        ],
+        "fnr": 0.23266475644699142,
+        "fnr_ci95": [
+          0.21894508341342353,
+          0.24697229664140966
+        ],
+        "brier": 0.10347452306329903,
+        "small_group": false
+      }
+    ],
+    "disparities_female_minus_male": {
+      "selection_rate_difference": -0.25579356319449326,
+      "tpr_difference": -0.10489630616749268,
+      "fpr_difference": -0.14830375040383914,
+      "fnr_difference": 0.10489630616749257,
+      "selection_rate_ratio": 0.3113737986385233
+    },
+    "fnlwgt_weighted_test_average_precision": 0.7995701824119048
+  },
+  "bls_context": [
+    {
+      "period": "January 2026",
+      "group": "All wage and salary workers",
+      "median_years": 4.1,
+      "source_url": "https://www.bls.gov/news.release/tenure.nr0.htm",
+      "accessed_date": "2026-09-28"
+    },
+    {
+      "period": "January 2026",
+      "group": "Men",
+      "median_years": 4.3,
+      "source_url": "https://www.bls.gov/news.release/tenure.nr0.htm",
+      "accessed_date": "2026-09-28"
+    },
+    {
+      "period": "January 2026",
+      "group": "Women",
+      "median_years": 4.0,
+      "source_url": "https://www.bls.gov/news.release/tenure.nr0.htm",
+      "accessed_date": "2026-09-28"
+    }
+  ],
+  "sources": [
+    [
+      "IBM HR source and license",
+      "https://github.com/IBM/employee-attrition-aif360#dataset-license-details"
+    ],
+    [
+      "Original fictional HR listing",
+      "https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset"
+    ],
+    [
+      "Adult: Becker & Kohavi (1996), DOI 10.24432/C5XW20",
+      "https://archive.ics.uci.edu/dataset/2/adult"
+    ],
+    [
+      "BLS Employee Tenure in 2026, released September 24 2026",
+      "https://www.bls.gov/news.release/tenure.nr0.htm"
+    ],
+    [
+      "ODbL 1.0",
+      "https://opendatacommons.org/licenses/odbl/1-0/"
+    ],
+    [
+      "DbCL 1.0",
+      "https://opendatacommons.org/licenses/dbcl/1-0/"
+    ]
+  ]
+}

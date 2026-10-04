@@ -1,0 +1,4 @@
+finding,source,transformation,evidence,recommendation
+F01,IBM HR Attrition and JobRole,group_summary,data/processed/hr_by_JobRole.csv,Investigate workload through a real pilot
+F02,IBM HR income and Gender,compensation_tests,reports/results.json,Validate compensation definitions before further investigation
+F03,Adult official test income and sex,audit,reports/results.json,Monitor multiple error and calibration metrics

@@ -1,0 +1,8 @@
+seed: 42
+hr_test_fraction: 0.20
+hr_validation_fraction_of_development: 0.25
+adult_validation_fraction: 0.20
+threshold_objective: validation_f1
+model_selection: validation_average_precision
+income_units: unspecified_source_units
+minimum_group_support_flag: 50
